@@ -192,9 +192,10 @@ module.exports = {
       chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
+      inject: true,
       filename: 'popout.html',
       template: paths.popoutHtml,
-      chunks: [],
+      chunks: ['popout'],
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.
