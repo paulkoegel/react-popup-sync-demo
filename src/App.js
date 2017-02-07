@@ -4,9 +4,12 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <button onClick={this.props.increaseCounter}>
-        {this.props.counter}
-      </button>
+      <div>
+        <h1>App</h1>
+        <button onClick={this.props.increaseCounter}>
+          {this.props.counter}
+        </button>
+      </div>
     );
   }
 }
