@@ -29,5 +29,5 @@ const increaseCounter = () => {
 };
 
 renderApp();
-const popout = window.open('http://localhost:3000/popout.html', 'Popout Demo', 'width=350, height=250');
+const popout = window.open('/popout.html', 'Popout Demo', 'width=350, height=250, resizable=1');
 popout.onload = renderPopout;
