@@ -30,4 +30,9 @@ const increaseCounter = () => {
 
 renderApp();
 const popout = window.open('/popout.html', 'Popout Demo', 'width=350, height=250, resizable=1');
-popout.onload = renderPopout;
+// IE11 has the popout loaded before we can register an onload event.
+if (popout.document.readyState === 'complete' && popout.document.getElementById('popout-root').length > 0) {
+  renderPopout();
+} else {
+  popout.onload = renderPopout;
+}
