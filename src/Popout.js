@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Meta from './Meta';
+import MetaFixed from './MetaFixed';
 
 class Popout extends Component {
   render() {
     return (
       <div>
-        <Meta />
+        <MetaFixed />
         <h1>{this.props.counter}</h1>
+        <Meta />
         <Meta />
         <Meta />
         <Meta />
