@@ -1,5 +1,6 @@
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
+var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
@@ -84,7 +85,10 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web'
-    }
+    },
+    root: [
+      path.resolve('./src')
+    ]
   },
 
   module: {
