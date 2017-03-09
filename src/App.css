@@ -1,14 +1,14 @@
 body {
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 button {
   font-size: 250px;
-  font-family: 'Droid Sans', sans-serif;
   font-weight: bold;
   min-width: 70px;
+  border: 2px solid black;
 }
