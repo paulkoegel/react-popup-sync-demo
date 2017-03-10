@@ -1,9 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   font-family: 'Droid Sans', sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+.appWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.usersSection, .counterSection {
+  border: 3px solid black;
+  padding: 20px;
+  flex: 1 0 50%;
+}
+
+.counterSection {
+  border-left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 button {
