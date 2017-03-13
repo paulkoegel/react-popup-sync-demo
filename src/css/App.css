@@ -27,16 +27,3 @@ body {
   padding: 20px;
   flex: 1 0 50%;
 }
-
-.counterSection {
-  border-left: 0;
-  display: flex;
-  justify-content: center;
-}
-
-button {
-  font-size: 250px;
-  font-weight: bold;
-  min-width: 70px;
-  border: 2px solid black;
-}

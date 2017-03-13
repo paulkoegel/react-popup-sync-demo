@@ -1,0 +1,12 @@
+.counterSection {
+  border-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.counterButton {
+  font-size: 250px;
+  font-weight: bold;
+  min-width: 70px;
+  border: 2px solid black;
+}
