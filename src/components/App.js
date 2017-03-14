@@ -4,7 +4,7 @@ import Counter from './Counter';
 import { LOCAL_STORAGE_KEY } from 'constants';
 
 const openPopout = () => {
-  window.open('popout.html', 'Popout Window Title', 'width=800, height=500');
+  window.open('popout.html', 'Popout Window Title', 'width=800, height=500,resizable=1');
 };
 
 class App extends Component {
