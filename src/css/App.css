@@ -13,17 +13,18 @@ body {
   font-family: 'Droid Sans', sans-serif;
 }
 
-#root {
+#root, #popout-root {
   width: 100%;
 }
 
-.appWrapper {
-  width: 100%;
-  display: flex;
-}
-
-.usersSection, .counterSection {
+.openPopoutButton {
+  font-size: 25px;
+  margin-bottom: 20px;
+  background: white;
   border: 3px solid black;
-  padding: 20px;
-  flex: 1 0 50%;
+  font-family: 'Comic Sans MS', script;
+  margin: 0 auto;
+  width: 180px;
+  display: block;
+  margin-bottom: 40px;
 }
