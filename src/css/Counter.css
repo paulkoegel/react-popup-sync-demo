@@ -1,7 +1,10 @@
 .counterSection {
-  border-left: 0;
   display: flex;
+  flex: 1 0 50%;
   justify-content: center;
+  border: 3px solid black;
+  border-left: 0;
+  padding: 20px;
 }
 
 .counterButton {
