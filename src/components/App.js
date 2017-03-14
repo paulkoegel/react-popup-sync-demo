@@ -5,7 +5,7 @@ import Documents from './Documents';
 import Counter from './Counter';
 
 const openPopout = () => {
-  window.open('popout.html', 'Popout Window Title', 'width=800, height=500');
+  window.open('popout.html', 'Popout Window Title', 'width=500, height=500,resize=1');
 };
 
 const App = () => (
