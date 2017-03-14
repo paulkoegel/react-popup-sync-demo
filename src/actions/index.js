@@ -1,5 +1,8 @@
-import { COUNTER_INCREMENT, COUNTER_SET } from 'constants';
-import { NOTES_ADD } from 'constants';
+import {
+  COUNTER_INCREMENT, COUNTER_SET,
+  NOTES_ADD,
+  DOCUMENTS_DELETE, DOCUMENTS_TOGGLE_FAVOURITE
+} from 'constants';
 
 export const incrementCounter = () => (
   {
@@ -21,7 +24,21 @@ export const addNote = (body) => (
       body: body,
       date: new Date().toLocaleString('de-DE'),
       author: 'Bud Spencer',
-      title: 'Important Note!!!'
+      title: body.substring(0, 30)
     }
   }
 );
+
+export const toggleFavouriteDocument = (documentId) => {
+  return {
+    type: DOCUMENTS_TOGGLE_FAVOURITE,
+    documentId
+  };
+};
+
+export const deleteDocument = (documentId) => {
+  return {
+    type: DOCUMENTS_DELETE,
+    documentId
+  }
+};

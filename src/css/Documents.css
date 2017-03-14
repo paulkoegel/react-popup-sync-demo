@@ -1,0 +1,74 @@
+.documentsSection {
+  border: 3px solid black;
+  border-left: 0;
+  padding: 20px;
+  flex: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.documentsHeadline {
+  margin-top: 0;
+}
+
+.documentItem {
+  position: relative;
+  border: 2px solid grey;
+  padding: 5px;
+  font-size: 14px;
+  margin-top: -2px;
+  user-select: none;
+  cursor: default;
+}
+
+.documentItem.isDeleted {
+  color: lightgrey;
+}
+
+.documentItem.isSelected {
+  background: lightyellow;
+}
+
+.documentItem:first-child {
+  margin-top: 0;
+}
+
+.documentItem h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.documentItem h6 {
+  margin: 3px 0;
+}
+
+.documentsButtonWrapper {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.favouriteButton, .deleteButton {
+  font-size: 20px;
+  line-height: 1em;
+  height: 30px;
+  border: 2px solid black;
+  background: white;
+  width: 42px;
+  outline: 0;
+}
+
+.favouriteButton:hover, .deleteButton:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.favouriteButton:disabled, .deleteButton:disabled {
+  color: lightgrey;
+  background: darkgrey;
+  border-color: lightgrey;
+}
+
+.favouriteButton {
+  margin-right: 3px;
+}

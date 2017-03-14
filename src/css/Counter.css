@@ -1,15 +1,30 @@
 .counterSection {
-  display: flex;
-  flex: 1 0 50%;
-  justify-content: center;
+  flex: 1;
   border: 3px solid black;
   border-left: 0;
   padding: 20px;
+  flex-direction: column;
+}
+
+.counterSection h3 {
+  margin-top: 0;
 }
 
 .counterButton {
-  font-size: 250px;
+  font-size: 200px;
   font-weight: bold;
   min-width: 70px;
-  border: 2px solid black;
+  width: 100%;
+  border: 10px solid black;
+  background: white;
+  outline: 0;
+  cursor: pointer;
+}
+
+.counterButton:hover {
+  background: #eee;
+}
+
+.counterButton:active {
+  background: #ddd;
 }

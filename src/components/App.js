@@ -1,7 +1,8 @@
 import React from 'react';
 import 'css/App.css';
-import Counter from './Counter';
 import Notes from './Notes';
+import Documents from './Documents';
+import Counter from './Counter';
 
 const openPopout = () => {
   window.open('popout.html', 'Popout Window Title', 'width=800, height=500');
@@ -9,11 +10,12 @@ const openPopout = () => {
 
 const App = () => (
   <div>
-    <button onClick={openPopout}>
+    <button className='openPopoutButton' onClick={openPopout}>
       Open popout
     </button>
     <div className='appWrapper'>
       <Notes />
+      <Documents />
       <Counter />
     </div>
   </div>

@@ -1,13 +1,28 @@
 .notesSection {
   border: 3px solid black;
   padding: 20px;
-  flex: 1 0 50%;
+  flex: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.notesHeadline {
+  margin-top: 0;
 }
 
 .noteItem {
   border: 2px solid grey;
   padding: 5px;
   font-size: 14px;
+  margin-top: -2px;
+}
+
+.noteItem:first-child {
+  margin-top: 0;
+}
+
+.noteItem.isNew {
+  background: lightgreen;
 }
 
 .noteItem h3 {
@@ -22,4 +37,12 @@
 .noteItem p {
   margin: 5px 0;
   white-space: pre-wrap;
+}
+
+.addNoteInput {
+  width: 100%;
+  min-height: 50px;
+  font-size: 20px;
+  font-family: inherit;
+  margin-bottom: 5px;
 }

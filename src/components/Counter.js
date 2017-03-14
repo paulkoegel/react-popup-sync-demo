@@ -5,6 +5,7 @@ import 'css/Counter.css';
 
 const Counter = ({counter, onIncrease}) => (
   <section className='counterSection'>
+    <h3>Counter</h3>
     <button className='counterButton' onClick={onIncrease}>
       {counter}
     </button>
