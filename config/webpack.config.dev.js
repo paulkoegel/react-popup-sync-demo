@@ -7,6 +7,7 @@ var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
+require("babel-polyfill");
 
 
 
@@ -32,6 +33,7 @@ module.exports = {
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: {
     "main": [
+      "babel-polyfill",
       // Include an alternative client for WebpackDevServer. A client's job is to
       // connect to WebpackDevServer by a socket and get notified about changes.
       // When you save a file, the client will either apply hot updates (in case
