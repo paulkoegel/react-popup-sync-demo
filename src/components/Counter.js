@@ -21,6 +21,12 @@ const mapStateToProps = (state, ownProps) => (
 const mapDispatchToProps = (dispatch, ownProps) => (
   {
     onIncrease: () => {
+      const otherWindow = window.popout || window.opener;
+      const action = incrementCounter();
+      if (otherWindow) {
+        const synchEvent = new CustomEvent('popout-synch', { detail: action});
+        otherWindow.dispatchEvent(synchEvent);
+      }
       dispatch(incrementCounter());
     }
   }

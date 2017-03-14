@@ -5,6 +5,11 @@ import App from 'components/App';
 import 'css/index.css';
 import store from './initStore';
 
+window.addEventListener('popout-synch', (e) => {
+  console.log('popout-synch', e.detail);
+  store.dispatch(e.detail);
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
