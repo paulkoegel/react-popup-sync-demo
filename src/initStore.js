@@ -6,7 +6,8 @@ import { setCounter } from 'actions';
 
 let persistedState;
 try {
-  persistedState = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY)) || { counter: null };
+  // need the `|| {}` fallback because getItem will return `null` if the key is not present. `Null` will overwrite the reducers' initial values, `{}` won't.
+  persistedState = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY)) || {};
 } catch(e) {
   console.warn("Couldn't restore Redux state from local storage:", e);
   persistedState = {};
