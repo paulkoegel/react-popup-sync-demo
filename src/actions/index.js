@@ -1,5 +1,5 @@
 import {
-  COUNTER_INCREMENT, COUNTER_SET,
+  COUNTER_INCREMENT,
   NOTES_ADD,
   DOCUMENTS_DELETE, DOCUMENTS_TOGGLE_FAVOURITE
 } from 'constants';
@@ -7,13 +7,6 @@ import {
 export const incrementCounter = () => (
   {
     type: COUNTER_INCREMENT
-  }
-);
-
-export const setCounter = (value) => (
-  {
-    type: COUNTER_SET,
-    value
   }
 );
 

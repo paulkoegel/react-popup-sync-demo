@@ -5,7 +5,6 @@ import { addNote } from 'actions';
 
 class Notes extends Component {
   handleChange = (e) => {
-    console.log('handleChange', e.target.value);
     this.setState({body: e.target.value});
   };
 

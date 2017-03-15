@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from 'components/App';
 import 'css/index.css';
-import store from './initStore';
-import { POPOUT_SYNCH } from 'constants';
+import reducer from './reducers';
 
-window.addEventListener(POPOUT_SYNCH, (e) => {
-  console.log(POPOUT_SYNCH, e.detail);
-  store.dispatch(e.detail);
-});
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,3 +17,9 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+// main window function we're exposing to the popout window
+window.eventCenter = (serializedAction) => {
+  const action = JSON.parse(serializedAction);
+  store.dispatch(action);
+};
