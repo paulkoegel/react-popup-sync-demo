@@ -29,9 +29,9 @@ const mapDispatchToProps = (dispatch, ownProps) => (
         // source: https://github.com/Snugug/eq.js/issues/53#issuecomment-130221203
         if (!('CustomEvent' in window && (typeof window.CustomEvent === 'function' || (window.CustomEvent.toString().indexOf('CustomEventConstructor') > -1)))) {
           // IE11 - Reiner
-          const synchEvent = document.createEvent('CustomEvent');
-          synchEvent.initCustomEvent(POPOUT_SYNCH, true, true, action); //, action);
+          const synchEvent = otherWindow.document.createEvent('CustomEvent');
           console.log('IE11 Reiner')//, synchEvent);
+          synchEvent.initCustomEvent(POPOUT_SYNCH, false, false, action);
           otherWindow.dispatchEvent(synchEvent);
           //synchEvent;
           // IE11 - stackoverflow
